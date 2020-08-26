@@ -216,8 +216,8 @@ export default {
       this.setChartScale(0.9)
     },
     zoomHandler (e) {
-      let newScale  = 1 + (e.deltaY > 0 ? -0.05 : 0.05)
-      this.setChartScale(newScale)
+      // let newScale  = 1 + (e.deltaY > 0 ? -0.05 : 0.05)
+      // this.setChartScale(newScale)
     }
   }
 };
@@ -313,7 +313,7 @@ export default {
 }
 .orgchart .verticalNodes > td::before {
   content: "";
-  border: 1px solid #BDBDBD;
+  border: 1px solid #21b799b3;
 }
 .orgchart .verticalNodes > td > ul > li:first-child::before {
   box-sizing: border-box;
@@ -331,7 +331,7 @@ export default {
   content: "";
   position: absolute;
   left: -6px;
-  border-color: #BDBDBD;
+  border-color: #21b799b3;
   border-style: solid;
   border-width: 0 0 2px 2px;
 }
@@ -381,20 +381,20 @@ export default {
   height: 20px;
 }
 .orgchart .lines .topLine {
-  border-top: 2px solid #BDBDBD;
+  border-top: 2px solid #21b799b3;
 }
 .orgchart .lines .rightLine {
-  border-right: 1px solid #BDBDBD;
+  border-right: 1px solid #21b799b3;
   float: none;
   border-radius: 0;
 }
 .orgchart .lines .leftLine {
-  border-left: 1px solid #BDBDBD;
+  border-left: 1px solid #21b799b3;
   float: none;
   border-radius: 0;
 }
 .orgchart .lines .downLine {
-  background-color: #BDBDBD;
+  background-color: #21b799b3;
   margin: 0 auto;
   height: 20px;
   width: 2px;
@@ -425,13 +425,13 @@ export default {
   color: rgba(68, 157, 68, 0.8);
 }
 .orgchart .node:hover {
-  background-color: #BDBDBD;
+  background-color: #21b799b3;
   transition: 0.5s;
   cursor: default;
   z-index: 20;
 }
 .orgchart .node.focused {
-  background-color: #BDBDBD;
+  background-color: #21b799b3;
 }
 .orgchart .ghost-node {
   position: fixed;
@@ -454,7 +454,7 @@ export default {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  background-color: #BDBDBD;
+  background-color: #21b799b3;
   color: #fff;
   border-radius: 4px 4px 0 0;
 }
@@ -483,7 +483,7 @@ export default {
   height: 20px;
   font-size: 11px;
   line-height: 18px;
-  border: 1px solid #BDBDBD;
+  border: 1px solid #21b799b3;
   border-radius: 0 0 4px 4px;
   text-align: center;
   background-color: #fff;
@@ -651,10 +651,10 @@ export default {
 }
 
 .orgchart .node.is-active .title {
-  background-color: #21b799 !important;
+  background-color: #009688 !important;
 }
 
 .orgchart .node.is-active .content {
-  border: 1px solid #21b799 !important;
+  border: 1px solid #009688 !important;
 }
 </style>
