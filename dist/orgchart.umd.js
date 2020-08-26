@@ -11551,21 +11551,14 @@ module.exports = function (bitmap, value) {
 
 /***/ }),
 
-/***/ "4839":
+/***/ "4a44":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_OrganizationChartContainer_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("4cfb");
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_OrganizationChartContainer_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_OrganizationChartContainer_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_OrganizationChartContainer_vue_vue_type_style_index_1_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("e523");
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_OrganizationChartContainer_vue_vue_type_style_index_1_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_OrganizationChartContainer_vue_vue_type_style_index_1_lang_css___WEBPACK_IMPORTED_MODULE_0__);
 /* unused harmony reexport * */
- /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_OrganizationChartContainer_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-
-/***/ "4cfb":
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_OrganizationChartContainer_vue_vue_type_style_index_1_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -12273,6 +12266,13 @@ module.exports = (
 
 /***/ }),
 
+/***/ "e523":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "ebd6":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12373,12 +12373,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"78012309-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/OrganizationChartContainer.vue?vue&type=template&id=655f5f4c&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',_vm._b({staticClass:"orgchart-container",on:{"wheel":function($event){_vm.zoom && _vm.zoomHandler($event)},"mouseup":function($event){_vm.pan && _vm.panning && _vm.panEndHandler($event)}}},'div',{ scopedSlots: _vm.$scopedSlots },false),[_c('div',{staticClass:"orgchart",style:({ transform: _vm.transformVal, cursor: _vm.cursorVal }),on:{"mousedown":function($event){_vm.pan && _vm.panStartHandler($event)},"mousemove":function($event){_vm.pan && _vm.panning && _vm.panHandler($event)}}},[_c('organization-chart-node',{attrs:{"datasource":_vm.datasource,"handle-click":_vm.handleClick,"active-node":_vm.activeNode},scopedSlots:_vm._u([_vm._l((Object.keys(_vm.$scopedSlots)),function(slot){return {key:slot,fn:function(scope){return [_vm._t(slot,null,null,scope)]}}})],null,true)})],1)])}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"78012309-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/OrganizationChartContainer.vue?vue&type=template&id=1c3aef44&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',_vm._b({staticClass:"orgchart-container",class:_vm.containerClass,on:{"wheel":function($event){_vm.zoom && _vm.zoomHandler($event)},"mouseup":function($event){_vm.pan && _vm.panning && _vm.panEndHandler($event)}}},'div',{ scopedSlots: _vm.$scopedSlots },false),[_c('div',{staticClass:"orgchart",class:_vm.orgchartClass,style:({ transform: _vm.transformVal, cursor: _vm.cursorVal }),on:{"mousedown":function($event){_vm.pan && _vm.panStartHandler($event)},"mousemove":function($event){_vm.pan && _vm.panning && _vm.panHandler($event)}}},[_c('organization-chart-node',{attrs:{"datasource":_vm.datasource,"handle-click":_vm.handleClick,"active-node":_vm.activeNode},scopedSlots:_vm._u([_vm._l((Object.keys(_vm.$scopedSlots)),function(slot){return {key:slot,fn:function(scope){return [_vm._t(slot,null,null,scope)]}}})],null,true)})],1)])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/OrganizationChartContainer.vue?vue&type=template&id=655f5f4c&
+// CONCATENATED MODULE: ./src/components/OrganizationChartContainer.vue?vue&type=template&id=1c3aef44&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.split.js
 var es6_regexp_split = __webpack_require__("28a5");
@@ -12604,11 +12604,22 @@ var component = normalizeComponent(
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ var OrganizationChartContainervue_type_script_lang_js_ = ({
   name: 'Container',
   props: {
+    options: {
+      type: Object,
+      default: function _default() {
+        return {
+          direction: 't2b',
+          showGrid: true
+        };
+      }
+    },
     datasource: {
       type: Object,
       required: true
@@ -12648,6 +12659,20 @@ var component = normalizeComponent(
   components: {
     OrganizationChartNode: OrganizationChartNode
   },
+  computed: {
+    containerClass: function containerClass() {
+      var showGrid = this.options.showGrid;
+      var classStr = '';
+      if (showGrid) classStr += 'show-gird';
+      return classStr;
+    },
+    orgchartClass: function orgchartClass() {
+      var direction = this.options.direction;
+      var classStr = '';
+      if (direction) classStr += direction;
+      return classStr;
+    }
+  },
   methods: {
     handleClick: function handleClick(nodeData) {
       this.$emit('node-click', nodeData);
@@ -12675,6 +12700,8 @@ var component = normalizeComponent(
       if (this.transformVal === '') {
         if (this.transformVal.indexOf('3d') === -1) {
           this.transformVal = 'matrix(1,0,0,1,' + newX + ',' + newY + ')';
+          if (this.options.direction === 'l2r') this.transformVal += ' rotate(-90deg) rotateY(180deg)';
+          if (this.options.direction === 'r2l') this.transformVal += ' rotate(90deg)';
         } else {
           this.transformVal = 'matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,' + newX + ', ' + newY + ',0,1)';
         }
@@ -12690,6 +12717,8 @@ var component = normalizeComponent(
         }
 
         this.transformVal = matrix.join(',');
+        if (this.options.direction === 'l2r') this.transformVal += ' rotate(-90deg) rotateY(180deg)';
+        if (this.options.direction === 'r2l') this.transformVal += ' rotate(90deg)';
       }
     },
     panStartHandler: function panStartHandler(e) {
@@ -12764,8 +12793,8 @@ var component = normalizeComponent(
 });
 // CONCATENATED MODULE: ./src/components/OrganizationChartContainer.vue?vue&type=script&lang=js&
  /* harmony default export */ var components_OrganizationChartContainervue_type_script_lang_js_ = (OrganizationChartContainervue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/components/OrganizationChartContainer.vue?vue&type=style&index=0&lang=css&
-var OrganizationChartContainervue_type_style_index_0_lang_css_ = __webpack_require__("4839");
+// EXTERNAL MODULE: ./src/components/OrganizationChartContainer.vue?vue&type=style&index=1&lang=css&
+var OrganizationChartContainervue_type_style_index_1_lang_css_ = __webpack_require__("4a44");
 
 // CONCATENATED MODULE: ./src/components/OrganizationChartContainer.vue
 
