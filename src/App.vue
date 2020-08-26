@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <org-chart :datasource="ds" @node-click="selectNode" :zoom="false" :pan="true" :active-node="activeNode">
+    <org-chart :datasource="ds" @node-click="selectNode" :zoom="false" :pan="true" :active-node="activeNode" :options="options">
     </org-chart>
   </div>
 </template>
@@ -17,6 +17,10 @@ export default {
     return {
       activeNode: {
         id: 3
+      },
+      options: {
+        direction: 'l2r',
+        showGrid: false
       },
       ds: {
         'id': '1',
