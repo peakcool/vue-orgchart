@@ -3,13 +3,13 @@
     <tbody>
       <tr>
        <td :colspan="datasource.children && datasource.children.length ? datasource.children.length*2 : null">
-        <div class="node" :id="datasource.id" @click.stop="handleClick(datasource)">
+        <div class="node" :class="activeNode.id == datasource.id ? 'is-active' : ''" :id="datasource.id" @click.stop="handleClick(datasource)">
           <slot :node-data="datasource">
             <div class="title">
-              <i class="fa fa-users symbol"></i>
+              <i class="fa symbol" :class="datasource.icon"></i>
               {{ datasource.name }}
             </div>
-            <div class="content">{{ datasource.title }}</div>
+            <div class="content">{{ datasource.subtitle }}</div>
           </slot>
         </div>
        </td>
@@ -47,6 +47,12 @@ export default {
   name: 'node',
   props: {
     datasource: Object,
+    activeNode: {
+      type: Object,
+      default() {
+        return {id: null}
+      }
+    },
     handleClick: Function
   },
   methods: {

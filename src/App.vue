@@ -1,9 +1,6 @@
 <template>
   <div id="app">
-    <org-chart :datasource="ds" @node-click="selectNode">
-<!--       <template slot-scope="{ nodeData }">
-        <b @click="selectNode(nodeData)">{{ nodeData.name }}</b>
-      </template> -->
+    <org-chart :datasource="ds" @node-click="selectNode" :zoom="false" :pan="true" :active-node="activeNode">
     </org-chart>
   </div>
 </template>
@@ -18,25 +15,29 @@ export default {
   },
   data () {
     return {
+      activeNode: {
+        id: 1,
+        name: 'Lao Lao'
+      },
       ds: {
         'id': '1',
         'name': 'Lao Lao',
-        'title': 'general manager',
+        'subtitle': 'general manager',
         'children': [
-          { 'id': '2', 'name': 'Bo Miao', 'title': 'department manager' },
-          { 'id': '3', 'name': 'Su Miao', 'title': 'department manager',
+          { 'id': '2', 'name': 'Bo Miao', 'subtitle': 'department manager' },
+          { 'id': '3', 'name': 'Su Miao', 'subtitle': 'department manager',
             'children': [
-              { 'id': '4', 'name': 'Tie Hua', 'title': 'senior engineer' },
-              { 'id': '5', 'name': 'Hei Hei', 'title': 'senior engineer',
+              { 'id': '4', 'name': 'Tie Hua', 'subtitle': 'senior engineer' },
+              { 'id': '5', 'name': 'Hei Hei', 'subtitle': 'senior engineer',
                 'children': [
-                  { 'id': '6', 'name': 'Pang Pang', 'title': 'engineer' },
-                  { 'id': '7', 'name': 'Xiang Xiang', 'title': 'UE engineer' }
+                  { 'id': '6', 'name': 'Pang Pang', 'subtitle': 'engineer' },
+                  { 'id': '7', 'name': 'Xiang Xiang', 'subtitle': 'UE engineer' }
                 ]
                }
              ]
            },
-          { 'id': '8', 'name': 'Hong Miao', 'title': 'department manager' },
-          { 'id': '9', 'name': 'Chun Miao', 'title': 'department manager' }
+          { 'id': '8', 'name': 'Hong Miao', 'subtitle': 'department manager' },
+          { 'id': '9', 'name': 'Chun Miao', 'subtitle': 'department manager' }
         ]
       }
     }
