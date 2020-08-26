@@ -30,7 +30,7 @@
         </tr>
         <tr class="nodes">
           <td colspan="2" v-for="child in datasource.children" :key="child.id">
-            <node :datasource="child" :handle-click="handleClick">
+            <node :datasource="child" :handle-click="handleClick" :active-node="activeNode">
               <template v-for="slot in Object.keys($scopedSlots)" :slot="slot" slot-scope="scope">
                 <slot :name="slot" v-bind="scope"/>
               </template>

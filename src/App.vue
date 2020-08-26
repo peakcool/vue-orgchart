@@ -16,8 +16,7 @@ export default {
   data () {
     return {
       activeNode: {
-        id: 1,
-        name: 'Lao Lao'
+        id: 3
       },
       ds: {
         'id': '1',
