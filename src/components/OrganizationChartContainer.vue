@@ -2,6 +2,7 @@
   <div v-bind="{ scopedSlots: $scopedSlots }"
     class="orgchart-container"
     :class="containerClass"
+    :style="containerStyle"
     @wheel="zoom && zoomHandler($event)"
     @mouseup="pan && panning && panEndHandler($event)"
   >
@@ -82,6 +83,17 @@ export default {
       let classStr = '';
       if (showGrid) classStr += 'show-gird'
       return classStr;
+    },
+    containerStyle() {
+      const { height } = this.options;
+      let style = {};
+      if (height) {
+        style.height = height
+      } else {
+        style.height = '480px' //default height
+      }
+
+      return style;
     },
     orgchartClass() {
       const { direction } = this.options;
@@ -202,7 +214,6 @@ export default {
 .orgchart-container {
   position: relative;
   display: inline-block;
-  height: 420px;
   width: calc(100% - 24px);
   border: 2px dashed #aaa;
   border-radius: 5px;
