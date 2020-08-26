@@ -9,7 +9,7 @@
     <div
       class="orgchart"
       :class="orgchartClass"
-      :style="{ transform: transformVal, cursor: cursorVal }"
+      :style="orgchartStyle"
       @mousedown="pan && panStartHandler($event)"
       @mousemove="pan && panning && panHandler($event)"
     >
@@ -18,6 +18,11 @@
           <slot :name="slot" v-bind="scope"/>
         </template>
       </organization-chart-node>
+    </div>
+
+    <div class="zoom-btn-groups" v-show="zoom">
+      <div class="up" @click="zoomUp"></div>
+      <div class="down" @click="zoomDown"></div>
     </div>
   </div>
 </template>
@@ -71,7 +76,8 @@ export default {
       panning: false,
       startX: 0,
       startY: 0,
-      transformVal: ''
+      transformVal: '',
+      scaleValue: 1
     }
   },
   components: {
@@ -100,6 +106,15 @@ export default {
       let classStr = '';
       if (direction) classStr += direction
       return classStr;
+    },
+    orgchartStyle() {
+      let style = {
+        transform: this.transformVal,
+        cursor: this.cursorVal
+      };
+      if (this.options.direction === 'l2r' && this.transformVal) style.transform += ' rotate(-90deg) rotateY(180deg)';
+      if (this.options.direction === 'r2l' && this.transformVal) style.transform += ' rotate(90deg)';
+      return style;
     }
   },
   methods: {
@@ -125,8 +140,6 @@ export default {
         if (this.transformVal === '') {
           if (this.transformVal.indexOf('3d') === -1) {
             this.transformVal = 'matrix(1,0,0,1,' + newX + ',' + newY + ')'
-            if (this.options.direction === 'l2r') this.transformVal += ' rotate(-90deg) rotateY(180deg)';
-            if (this.options.direction === 'r2l') this.transformVal += ' rotate(90deg)';
           } else {
             this.transformVal = 'matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,' + newX + ', ' + newY + ',0,1)'
           }
@@ -140,8 +153,6 @@ export default {
             matrix[13] = newY
           }
           this.transformVal = matrix.join(',')
-          if (this.options.direction === 'l2r') this.transformVal += ' rotate(-90deg) rotateY(180deg)';
-          if (this.options.direction === 'r2l') this.transformVal += ' rotate(90deg)';
         }
     },
     panStartHandler (e) {
@@ -198,8 +209,14 @@ export default {
         }
       }
     },
+    zoomUp() {
+      this.setChartScale(1.1)
+    },
+    zoomDown() {
+      this.setChartScale(0.9)
+    },
     zoomHandler (e) {
-      let newScale  = 1 + (e.deltaY > 0 ? -0.2 : 0.2)
+      let newScale  = 1 + (e.deltaY > 0 ? -0.05 : 0.05)
       this.setChartScale(newScale)
     }
   }
@@ -220,6 +237,34 @@ export default {
   overflow: auto;
   text-align: center;
 }
+/**zoom button groups */
+.zoom-btn-groups {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background-color: #f5f7fa;
+}
+
+.zoom-btn-groups .up, .zoom-btn-groups .down {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.zoom-btn-groups .up::before {
+  content: '\25B2';
+  color: #aaa;
+}
+
+.zoom-btn-groups .down::before {
+  content: '\25BC';
+  color: #aaa;
+}
+
+
 
 .orgchart-container.show-gird {
       background-image: linear-gradient(
@@ -268,7 +313,7 @@ export default {
 }
 .orgchart .verticalNodes > td::before {
   content: "";
-  border: 1px solid #909399;
+  border: 1px solid #BDBDBD;
 }
 .orgchart .verticalNodes > td > ul > li:first-child::before {
   box-sizing: border-box;
@@ -286,7 +331,7 @@ export default {
   content: "";
   position: absolute;
   left: -6px;
-  border-color: #909399;
+  border-color: #BDBDBD;
   border-style: solid;
   border-width: 0 0 2px 2px;
 }
@@ -336,20 +381,20 @@ export default {
   height: 20px;
 }
 .orgchart .lines .topLine {
-  border-top: 2px solid #909399;
+  border-top: 2px solid #BDBDBD;
 }
 .orgchart .lines .rightLine {
-  border-right: 1px solid #909399;
+  border-right: 1px solid #BDBDBD;
   float: none;
   border-radius: 0;
 }
 .orgchart .lines .leftLine {
-  border-left: 1px solid #909399;
+  border-left: 1px solid #BDBDBD;
   float: none;
   border-radius: 0;
 }
 .orgchart .lines .downLine {
-  background-color: #909399;
+  background-color: #BDBDBD;
   margin: 0 auto;
   height: 20px;
   width: 2px;
@@ -380,13 +425,13 @@ export default {
   color: rgba(68, 157, 68, 0.8);
 }
 .orgchart .node:hover {
-  background-color: #909399;
+  background-color: #BDBDBD;
   transition: 0.5s;
   cursor: default;
   z-index: 20;
 }
 .orgchart .node.focused {
-  background-color: #909399;
+  background-color: #BDBDBD;
 }
 .orgchart .ghost-node {
   position: fixed;
@@ -409,7 +454,7 @@ export default {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  background-color: #909399;
+  background-color: #BDBDBD;
   color: #fff;
   border-radius: 4px 4px 0 0;
 }
@@ -438,7 +483,7 @@ export default {
   height: 20px;
   font-size: 11px;
   line-height: 18px;
-  border: 1px solid #909399;
+  border: 1px solid #BDBDBD;
   border-radius: 0 0 4px 4px;
   text-align: center;
   background-color: #fff;

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <org-chart :datasource="ds" @node-click="selectNode" :zoom="false" :pan="true" :active-node="activeNode" :options="options">
+    <org-chart :datasource="ds" @node-click="selectNode" :zoom="true" :pan="true" :active-node="activeNode" :options="options">
     </org-chart>
   </div>
 </template>

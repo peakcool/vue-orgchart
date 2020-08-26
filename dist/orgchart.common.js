@@ -12364,12 +12364,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"78012309-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/OrganizationChartContainer.vue?vue&type=template&id=6b28faa4&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',_vm._b({staticClass:"orgchart-container",class:_vm.containerClass,style:(_vm.containerStyle),on:{"wheel":function($event){_vm.zoom && _vm.zoomHandler($event)},"mouseup":function($event){_vm.pan && _vm.panning && _vm.panEndHandler($event)}}},'div',{ scopedSlots: _vm.$scopedSlots },false),[_c('div',{staticClass:"orgchart",class:_vm.orgchartClass,style:({ transform: _vm.transformVal, cursor: _vm.cursorVal }),on:{"mousedown":function($event){_vm.pan && _vm.panStartHandler($event)},"mousemove":function($event){_vm.pan && _vm.panning && _vm.panHandler($event)}}},[_c('organization-chart-node',{attrs:{"datasource":_vm.datasource,"handle-click":_vm.handleClick,"active-node":_vm.activeNode},scopedSlots:_vm._u([_vm._l((Object.keys(_vm.$scopedSlots)),function(slot){return {key:slot,fn:function(scope){return [_vm._t(slot,null,null,scope)]}}})],null,true)})],1)])}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"78012309-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/OrganizationChartContainer.vue?vue&type=template&id=c5a26624&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',_vm._b({staticClass:"orgchart-container",class:_vm.containerClass,style:(_vm.containerStyle),on:{"wheel":function($event){_vm.zoom && _vm.zoomHandler($event)},"mouseup":function($event){_vm.pan && _vm.panning && _vm.panEndHandler($event)}}},'div',{ scopedSlots: _vm.$scopedSlots },false),[_c('div',{staticClass:"orgchart",class:_vm.orgchartClass,style:(_vm.orgchartStyle),on:{"mousedown":function($event){_vm.pan && _vm.panStartHandler($event)},"mousemove":function($event){_vm.pan && _vm.panning && _vm.panHandler($event)}}},[_c('organization-chart-node',{attrs:{"datasource":_vm.datasource,"handle-click":_vm.handleClick,"active-node":_vm.activeNode},scopedSlots:_vm._u([_vm._l((Object.keys(_vm.$scopedSlots)),function(slot){return {key:slot,fn:function(scope){return [_vm._t(slot,null,null,scope)]}}})],null,true)})],1),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.zoom),expression:"zoom"}],staticClass:"zoom-btn-groups"},[_c('div',{staticClass:"up",on:{"click":_vm.zoomUp}}),_c('div',{staticClass:"down",on:{"click":_vm.zoomDown}})])])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/OrganizationChartContainer.vue?vue&type=template&id=6b28faa4&
+// CONCATENATED MODULE: ./src/components/OrganizationChartContainer.vue?vue&type=template&id=c5a26624&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.split.js
 var es6_regexp_split = __webpack_require__("28a5");
@@ -12598,6 +12598,11 @@ var component = normalizeComponent(
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ var OrganizationChartContainervue_type_script_lang_js_ = ({
@@ -12645,7 +12650,8 @@ var component = normalizeComponent(
       panning: false,
       startX: 0,
       startY: 0,
-      transformVal: ''
+      transformVal: '',
+      scaleValue: 1
     };
   },
   components: {
@@ -12675,6 +12681,15 @@ var component = normalizeComponent(
       var classStr = '';
       if (direction) classStr += direction;
       return classStr;
+    },
+    orgchartStyle: function orgchartStyle() {
+      var style = {
+        transform: this.transformVal,
+        cursor: this.cursorVal
+      };
+      if (this.options.direction === 'l2r' && this.transformVal) style.transform += ' rotate(-90deg) rotateY(180deg)';
+      if (this.options.direction === 'r2l' && this.transformVal) style.transform += ' rotate(90deg)';
+      return style;
     }
   },
   methods: {
@@ -12704,8 +12719,6 @@ var component = normalizeComponent(
       if (this.transformVal === '') {
         if (this.transformVal.indexOf('3d') === -1) {
           this.transformVal = 'matrix(1,0,0,1,' + newX + ',' + newY + ')';
-          if (this.options.direction === 'l2r') this.transformVal += ' rotate(-90deg) rotateY(180deg)';
-          if (this.options.direction === 'r2l') this.transformVal += ' rotate(90deg)';
         } else {
           this.transformVal = 'matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,' + newX + ', ' + newY + ',0,1)';
         }
@@ -12721,8 +12734,6 @@ var component = normalizeComponent(
         }
 
         this.transformVal = matrix.join(',');
-        if (this.options.direction === 'l2r') this.transformVal += ' rotate(-90deg) rotateY(180deg)';
-        if (this.options.direction === 'r2l') this.transformVal += ' rotate(90deg)';
       }
     },
     panStartHandler: function panStartHandler(e) {
@@ -12789,8 +12800,14 @@ var component = normalizeComponent(
         }
       }
     },
+    zoomUp: function zoomUp() {
+      this.setChartScale(1.1);
+    },
+    zoomDown: function zoomDown() {
+      this.setChartScale(0.9);
+    },
     zoomHandler: function zoomHandler(e) {
-      var newScale = 1 + (e.deltaY > 0 ? -0.2 : 0.2);
+      var newScale = 1 + (e.deltaY > 0 ? -0.05 : 0.05);
       this.setChartScale(newScale);
     }
   }
