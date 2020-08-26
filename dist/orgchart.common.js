@@ -12381,12 +12381,12 @@ var es6_number_constructor = __webpack_require__("c5f6");
 var jquery = __webpack_require__("1157");
 var jquery_default = /*#__PURE__*/__webpack_require__.n(jquery);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"78012309-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/OrganizationChartNode.vue?vue&type=template&id=1416e874&
-var OrganizationChartNodevue_type_template_id_1416e874_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('table',[_c('tbody',[_c('tr',[_c('td',{attrs:{"colspan":_vm.datasource.children && _vm.datasource.children.length ? _vm.datasource.children.length*2 : null}},[_c('div',{staticClass:"node",class:_vm.activeNode.id == _vm.datasource.id ? 'is-active' : '',attrs:{"id":_vm.datasource.id},on:{"click":function($event){$event.stopPropagation();return _vm.handleClick(_vm.datasource)}}},[_vm._t("default",[_c('div',{staticClass:"title"},[_c('i',{staticClass:"fa symbol",class:_vm.datasource.icon}),_vm._v("\n            "+_vm._s(_vm.datasource.name)+"\n          ")]),_c('div',{staticClass:"content"},[_vm._v(_vm._s(_vm.datasource.subtitle))])],{"nodeData":_vm.datasource})],2)])]),(_vm.datasource.children && _vm.datasource.children.length)?[_c('tr',{staticClass:"lines"},[_c('td',{attrs:{"colspan":_vm.datasource.children.length*2}},[_c('div',{staticClass:"downLine"})])]),_c('tr',{staticClass:"lines"},[_c('td',{staticClass:"rightLine"}),_vm._l(((_vm.datasource.children.length-1)),function(n){return [_c('td',{staticClass:"leftLine topLine"}),_c('td',{staticClass:"rightLine topLine"})]}),_c('td',{staticClass:"leftLine"})],2),_c('tr',{staticClass:"nodes"},_vm._l((_vm.datasource.children),function(child){return _c('td',{key:child.id,attrs:{"colspan":"2"}},[_c('node',{attrs:{"datasource":child,"handle-click":_vm.handleClick},scopedSlots:_vm._u([_vm._l((Object.keys(_vm.$scopedSlots)),function(slot){return {key:slot,fn:function(scope){return [_vm._t(slot,null,null,scope)]}}})],null,true)})],1)}),0)]:_vm._e()],2)])}
-var OrganizationChartNodevue_type_template_id_1416e874_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"78012309-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/OrganizationChartNode.vue?vue&type=template&id=2b107a0e&
+var OrganizationChartNodevue_type_template_id_2b107a0e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('table',[_c('tbody',[_c('tr',[_c('td',{attrs:{"colspan":_vm.datasource.children && _vm.datasource.children.length ? _vm.datasource.children.length*2 : null}},[_c('div',{staticClass:"node",class:_vm.activeNode.id == _vm.datasource.id ? 'is-active' : '',attrs:{"id":_vm.datasource.id},on:{"click":function($event){$event.stopPropagation();return _vm.handleClick(_vm.datasource)}}},[_vm._t("default",[_c('div',{staticClass:"title"},[_c('i',{staticClass:"fa symbol",class:_vm.datasource.icon}),_vm._v("\n            "+_vm._s(_vm.datasource.name)+"\n          ")]),_c('div',{staticClass:"content"},[_vm._v(_vm._s(_vm.datasource.subtitle))])],{"nodeData":_vm.datasource})],2)])]),(_vm.datasource.children && _vm.datasource.children.length)?[_c('tr',{staticClass:"lines"},[_c('td',{attrs:{"colspan":_vm.datasource.children.length*2}},[_c('div',{staticClass:"downLine"})])]),_c('tr',{staticClass:"lines"},[_c('td',{staticClass:"rightLine"}),_vm._l(((_vm.datasource.children.length-1)),function(n){return [_c('td',{staticClass:"leftLine topLine"}),_c('td',{staticClass:"rightLine topLine"})]}),_c('td',{staticClass:"leftLine"})],2),_c('tr',{staticClass:"nodes"},_vm._l((_vm.datasource.children),function(child){return _c('td',{key:child.id,attrs:{"colspan":"2"}},[_c('node',{attrs:{"datasource":child,"handle-click":_vm.handleClick,"active-node":_vm.activeNode},scopedSlots:_vm._u([_vm._l((Object.keys(_vm.$scopedSlots)),function(slot){return {key:slot,fn:function(scope){return [_vm._t(slot,null,null,scope)]}}})],null,true)})],1)}),0)]:_vm._e()],2)])}
+var OrganizationChartNodevue_type_template_id_2b107a0e_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/OrganizationChartNode.vue?vue&type=template&id=1416e874&
+// CONCATENATED MODULE: ./src/components/OrganizationChartNode.vue?vue&type=template&id=2b107a0e&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/OrganizationChartNode.vue?vue&type=script&lang=js&
 //
@@ -12561,8 +12561,8 @@ function normalizeComponent (
 
 var component = normalizeComponent(
   components_OrganizationChartNodevue_type_script_lang_js_,
-  OrganizationChartNodevue_type_template_id_1416e874_render,
-  OrganizationChartNodevue_type_template_id_1416e874_staticRenderFns,
+  OrganizationChartNodevue_type_template_id_2b107a0e_render,
+  OrganizationChartNodevue_type_template_id_2b107a0e_staticRenderFns,
   false,
   null,
   null,
