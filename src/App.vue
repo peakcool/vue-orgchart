@@ -20,7 +20,9 @@ export default {
       },
       options: {
         direction: 'l2r',
-        showGrid: false
+        showGrid: false,
+        showBorder: true,
+        height: '200px'
       },
       ds: {
         'id': '1',

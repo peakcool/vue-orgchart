@@ -12364,12 +12364,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"78012309-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/OrganizationChartContainer.vue?vue&type=template&id=a2cadc3c&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"78012309-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/OrganizationChartContainer.vue?vue&type=template&id=1440a1e2&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',_vm._b({staticClass:"orgchart-container",class:_vm.containerClass,style:(_vm.containerStyle),on:{"wheel":function($event){_vm.zoom && _vm.zoomHandler($event)},"mouseup":function($event){_vm.pan && _vm.panning && _vm.panEndHandler($event)}}},'div',{ scopedSlots: _vm.$scopedSlots },false),[_c('div',{staticClass:"orgchart",class:_vm.orgchartClass,style:(_vm.orgchartStyle),on:{"mousedown":function($event){_vm.pan && _vm.panStartHandler($event)},"mousemove":function($event){_vm.pan && _vm.panning && _vm.panHandler($event)}}},[_c('organization-chart-node',{attrs:{"datasource":_vm.datasource,"handle-click":_vm.handleClick,"active-node":_vm.activeNode},scopedSlots:_vm._u([_vm._l((Object.keys(_vm.$scopedSlots)),function(slot){return {key:slot,fn:function(scope){return [_vm._t(slot,null,null,scope)]}}})],null,true)})],1),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.zoom),expression:"zoom"}],staticClass:"zoom-btn-groups"},[_c('div',{staticClass:"up",on:{"click":_vm.zoomUp}}),_c('div',{staticClass:"down",on:{"click":_vm.zoomDown}})])])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/OrganizationChartContainer.vue?vue&type=template&id=a2cadc3c&
+// CONCATENATED MODULE: ./src/components/OrganizationChartContainer.vue?vue&type=template&id=1440a1e2&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.split.js
 var es6_regexp_split = __webpack_require__("28a5");
@@ -12613,7 +12613,8 @@ var component = normalizeComponent(
       default: function _default() {
         return {
           direction: 't2b',
-          showGrid: true
+          showGrid: true,
+          showBorder: true
         };
       }
     },
@@ -12659,9 +12660,12 @@ var component = normalizeComponent(
   },
   computed: {
     containerClass: function containerClass() {
-      var showGrid = this.options.showGrid;
+      var _this$options = this.options,
+          showGrid = _this$options.showGrid,
+          showBorder = _this$options.showBorder;
       var classStr = '';
       if (showGrid) classStr += 'show-gird';
+      if (showBorder) classStr += ' show-border';
       return classStr;
     },
     containerStyle: function containerStyle() {

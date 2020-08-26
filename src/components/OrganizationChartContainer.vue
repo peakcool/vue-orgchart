@@ -20,10 +20,10 @@
       </organization-chart-node>
     </div>
 
-    <div class="zoom-btn-groups" v-show="zoom">
-      <div class="up" @click="zoomUp"></div>
-      <div class="down" @click="zoomDown"></div>
-    </div>
+      <div class="zoom-btn-groups" v-show="zoom">
+        <div class="up" @click="zoomUp"></div>
+        <div class="down" @click="zoomDown"></div>
+      </div>
   </div>
 </template>
 
@@ -39,7 +39,8 @@ export default {
       default() {
         return {
           direction: 't2b',
-          showGrid: true
+          showGrid: true,
+          showBorder: true
         }
       }
     },
@@ -85,9 +86,10 @@ export default {
   },
   computed: {
     containerClass() {
-      const { showGrid } = this.options;
+      const { showGrid, showBorder } = this.options;
       let classStr = '';
       if (showGrid) classStr += 'show-gird'
+      if (showBorder) classStr += ' show-border'
       return classStr;
     },
     containerStyle() {
@@ -232,16 +234,30 @@ export default {
   position: relative;
   display: inline-block;
   width: calc(100% - 24px);
-  border: 2px dashed #aaa;
-  border-radius: 5px;
   overflow: auto;
   text-align: center;
+  /* transform: rotate(0); */
 }
+
+.orgchart-container.show-gird {
+      background-image: linear-gradient(
+      90deg,
+      rgba(80, 79, 79, 0.15) 10%,
+      rgba(0, 0, 0, 0) 10%
+    ),
+    linear-gradient(rgba(116, 114, 114, 0.15) 10%, rgba(0, 0, 0, 0) 10%);
+  background-size: 10px 10px;
+}
+
+.orgchart-container.show-border {
+    border: 2px dashed #aaa;
+    border-radius: 5px;
+}
+
 /**zoom button groups */
 .zoom-btn-groups {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
+  position: fixed;
+  right: 40px;
   background-color: #f5f7fa;
 }
 
@@ -262,18 +278,6 @@ export default {
 .zoom-btn-groups .down::before {
   content: '\25BC';
   color: #aaa;
-}
-
-
-
-.orgchart-container.show-gird {
-      background-image: linear-gradient(
-      90deg,
-      rgba(80, 79, 79, 0.15) 10%,
-      rgba(0, 0, 0, 0) 10%
-    ),
-    linear-gradient(rgba(116, 114, 114, 0.15) 10%, rgba(0, 0, 0, 0) 10%);
-  background-size: 10px 10px;
 }
 
 .orgchart {
